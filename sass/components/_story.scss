@@ -1,0 +1,48 @@
+.story {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: $color-white;
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;// This property inherit to childrens 
+    transform: skewX(-12deg);
+
+    // NOTE 1 !!!
+    // We use the direct child selector and then selected everything
+    // this will work with the shape and text but not with image, because we have a transform already
+
+    // NOTE 2 !!!
+    // in CSS currently there is no way of having two transform properties applying at the same time 
+    // I think that in the future these functions that we use here, they will be transformed to real 
+    // properties, so someday we may have skewX as a property and then we can specify 12 degrees 
+
+    /*
+    & > * {
+        transform: skewX(12deg);
+    }
+    */
+    // NOTE !!! The best way to float around an element that is floated is 
+    //          don't mess with margins we should use a transform
+
+    // NOTE !!! Flexible images for responsive web design, they always need a width, class name (without exception)
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        -webkit-shape-outside: circle(50% at 50% 50%);// works if the element has defined dimensions
+        shape-outside: circle(50% at 50% 50%);// the radius will be half the height and the width of the element
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) translateY(-3.5rem) skewX(12deg);
+    }
+
+    &__img {
+        height: 100%;// will be the 100% of the parent so 15rem
+    }
+
+    &__text {
+        transform: skewX(12deg);
+    }
+}
