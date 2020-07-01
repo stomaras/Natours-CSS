@@ -1,0 +1,260 @@
+/*
+COLORS
+
+Light green: #7ed567
+Medium green: #55c57a
+Dark green: #28b485
+
+The best way to perform a basic reset using the universal sellector;
+
+How to set project-wide fonts definitions
+
+How to clip parts of elements using clip-path
+
+*/
+
+/* In order to do the browser rendering with the same way */
+/* Now in the universal selector i will put some pseudo elements like after and before in order to take the 
+   behaviour
+*/
+*
+*::after
+*::before {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: inherit;
+}
+/* We will give a percentage here to overall font-size which will translate to a percentage of the font-size
+   given by the browser.Now the default font-size if user does not change anything is 16 pixels that's the 
+   absolute default. So if we put 100% in html font-size that's means that will be 16 pixels 
+   if the user does not change anything. So with this technique we allow to user zoom in the page automatically.
+   Maybe not zooming but increase all the measurements that we have in our page.
+   rem is not supported by internet explorer nine.
+*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+    color: #777;
+    padding: 3rem; /* 1rem = root-font-size in this case 10px  */
+
+    box-sizing: border-box;
+
+}
+/* header is the parent element of .logo-box so i set position to relative
+*/
+.header {
+    height: 95vh;
+    background-image:linear-gradient(
+        to right bottom,
+         rgb(36, 235, 102),
+         rgba(55, 97, 72, 0.8)), 
+    url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+/* Measurement of logo-box start from parent element which has its position set to relative */
+
+/* I display both heading-primary as block level elements and create line breaks after and before them */
+
+/* transform: translate(-50%, -50%) ... this means 50% are now no longer from the parent but for the element itself*/
+.header__logo-box{
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.header__logo {
+    height: 3.5rem;
+}
+
+.logo:hover {
+    animation: moveInRight 1s ease-out; /* i can use the animation multiple times in many places in the page */
+}
+
+.header__text-box {
+    position: absolute;
+    top: 50%; /* In relation to the parent element */
+    left: 50%; /* In relation to the parent element */
+    transform: translate(-50%, -50%); /* In relation to the element intself */
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+
+    backface-visibility: hidden; /* backface-visibility property determines if the back part of the element when we transform it is visible or hidden for the user  */
+    margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+
+    /* these are the only properties that required for the animation to work */
+    animation-name: moveInLeft; /* Name of the animation property */
+    animation-duration: 1s; /* Animation Duration property*/
+    animation-timing-function: ease-out; /* The animation-timing-function CSS property specifies how a css animation should progress over the duration of each cycle */
+
+    /* animation-iteration-count: 3;*/ /* How much time will take the animation */
+    /* animation-delay: 3s; */
+}
+
+.heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; /* instead of specyfing all of the above mentioned css properties we use animation and we can put all of these together and then CSS will figure out what means what*/
+
+}
+
+/*
+    How to create CSS animations using the keyframes at rule and the animation property
+
+    There are 2 types of animations in CSS the first one is to just use the transition property
+    and then change the properties that you want to animate on an event like when we hover the element.
+*/
+/*
+    I can specify what gonna happen in each moment of time of the animation.
+    Browser optimized for 2 properties : 1st opacity and 2nd transform property.
+*/
+@keyframes moveInLeft {
+    0% {
+        opacity: 0; /* At the beggining of the animation opacity must be zero */
+        transform: translateX(-10rem); /* we want to animate in the x-direction   i put -100 because i want to be more in the left in the begining*/
+    }
+
+    60% {
+        transform: rotate(1rem); /* Degree is a unit we use for rotations */
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1; /* At the end the opacity must be one */
+        transform: translate(0); /* Will look as in the beggining */
+    }
+
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    80% {
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+
+
+
+/*  We are gonna learn what pseudo-elements and pseudo-classes are
+*   How and why to use the :: after pseudo-element
+*   How to create a creative hover animation effect using the transition property.
+*/
+
+/* PseudoClass are special case of a selector */
+/* We use PseudoClasses to style elements under a special condition */
+/* Link is a special state of a selector when it is an anchor element so its functions as a link */
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2); /* offset in the x direction, then the y direction, then e direction, blur*/
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2); /* offset in the x direction, then the y direction, then e direction, blur
+*/
+}
+
+.btn--white {
+    background-color: #fff;
+    color: #777;
+}
+
+/* We are gonna use pseudo elements and pseudo elements allows us to style certain parts of elements 
+   z-index defines the position of the elements if they are one on top of another.
+*/
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn--white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn--animated {
+    animation: moveInBottom .5s ease-out 0.75s;
+    animation-fill-mode: backwards; 
+    /* This will automatically apply the styles up to zero percent before the animations start */
+}
+
+
+

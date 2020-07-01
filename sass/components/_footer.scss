@@ -1,0 +1,71 @@
+.footer-parts {
+
+    &__social-links{
+        list-style: none;
+        color: $color-white;
+
+        &--1{
+            display: inline-block;
+            margin-right: 1rem;
+            border-radius: 50%;
+            font-size: 2rem;
+            
+        }
+
+        &--2{
+            display: inline-block;
+            margin-right: 1rem;
+            border-radius: 50%;
+            font-size: 2rem;
+            
+        }
+
+        &--3{
+            display: inline-block;
+            margin-right: 1rem;
+            border-radius: 50%;
+            font-size: 2rem;
+            
+        }
+
+        &--4{
+            display: inline-block;
+            border-radius: 50%;
+            font-size: 2rem;
+            
+        }
+    }
+
+    &__rights{
+        font-size: 1.3rem;
+        color: $color-white;
+        &--1{
+            color: $color-white;
+            text-align: center;
+            margin-top: 6rem;
+           
+            border-radius: 50%;
+        }
+    }
+
+    
+
+    &__skills{
+        list-style: none;
+        font-size: 1.3rem;
+        color: $color-white;
+        &--1{
+            display: inline-block;
+            margin-right: 1rem;
+            margin-left: 7rem;
+        }
+
+        &--2{
+            display: inline-block;
+            margin-right: .1rem;
+        }
+    }
+
+
+    
+}

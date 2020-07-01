@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="css/style1.css">
+        <!-- Icon Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <script src="js/script.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/progressBar.js"></script>
+        <title>Aristos | Vehicle with unique characteristics</title>
+        <script src="https://kit.fontawesome.com/264541b314.js" crossorigin="anonymous"></script>
+
+        <!-- https://bennettfeely.com/clippy/ -->
+    </head>
+    <body>
+        <!-- BEM Logic : Block Element Modifier -->
+        <header class="header"><!-- It's a block element has meaning alone  -->
+            <div class="header__logo-box"><!-- logo-box it's an element as it has not meaning on its own -->
+                <img src="img/logoUI.png" alt="Logo" class="header__logo"><!-- logo it's an element as it has no meaning on it's own  -->
+            </div> 
+
+            <div class="header__text-box">    
+                <h1 class="heading-primary"><!-- It's a standalone block element -->
+                    <span class="heading-primary--main">Aristos</span><!-- Modifier of the heading primary -->
+                    <span class="heading-primary--sub">AUTOMATED 
+                        GROUND VEHICLE</span><!-- Modifier of the heading primary -->
+                </h1>
+                <!-- I will add an anchor element -->
+                <a href="#" class="btn btn--white btn--animated js--scroll-aristos">Discover Aristos</a><!-- button is a block white and animated are modifiers -->
+                </a>
+            </div>
+        </header>
+
+        <!-- main is another HTML5 element and this is just to tell search engines 
+             or screen readers that this is really the main part of our site 
+             The class u-center-text will center the text that is inside of it
+             the u-center-text is a utility class which only have one simple goal , and in this case 
+             it will be to center text
+        -->
+        <main>
+            <section class="section-about">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                        Exciting Vehicle with Extraordinary Characteristics
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <h3 class="heading-tertiary u-margin-bottom-small">Batter Condition: </h3>
+                        <p class="paragraph">
+                             <i class="feature-box__icon icon-basic-battery-half"></i>
+                        </p>
+
+                        <h3 class="heading-tertiary u-margin-bottom-small">Progress Bar</h3>
+                        <p class="paragraph">
+                           
+                        </p>
+                        <!-- The link in order to find the html special character "code" &rarr; is :
+                             https://css-tricks.com/snippets/html/glyphs/
+                             https://codingheroes.io/resources/
+                             Another website in which we can use icons is https://linea.io
+                        -->
+                        <a href="NavigationMap.html" class="btn-text">Navigation Map &rarr; </a>
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="composition">
+                            <img src="img/AristosImage.png" alt="Photo 1" class="composition__photo composition__photo--p1">
+                            <img src="img/AristosImage.png" alt="Photo 2" class="composition__photo composition__photo--p2">
+                            <img src="img/AristosImage.png" alt="Photo 3" class="composition__photo composition__photo--p3">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section-features js--section-aristos">
+
+                <div class="row">
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-ban"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Stops</h3>
+                            <p class="feature-box__test">
+                                Summary of stops in <b><i>aristos</i></b> Automated brush cutting ground vehicle are 2.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-clock"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small"> Time</h3>
+                            <p class="feature-box__test">
+                                The time that <b><i>aristos</i></b> can work is 07h29m37s approximate
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-map"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">QR-Detect</h3>
+                            <p class="feature-box__test">
+                                The number of <b><i>aristos</i></b> qr detect is absolute 7 in most cases.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-settings"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Trimmed Field</h3>
+                            <p class="feature-box__test">
+                                The summary of <b><i>aristos</i></b> trimmed field are  absolute 10 Acres.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <section class="section-tours">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                        More Special Characteristics
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--1">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--1">Aristos-Wheel</span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>Transplanter Solid Rubber Tyres</li>
+                                        <li>Condition: Good</li>
+                                        <li>Last air pressure: 14 KG/cm</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-1">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">Only</p>
+                                        <p class="card__price-value">30$</p>
+                                    </div>
+                                    <a href="#" class="btn btn--white">Book now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                        How to build an amazing, rotating card effect
+                        How to use perspective and backface-visibility property in css3
+                        How to use background blend modes
+                        How and when to use box-decoration-break property
+                    -->
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--2">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--2">Aristos-Motor</span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>ddddddddd</li>
+                                        <li>dddddddd</li>
+                                        <li>dddddddddddd</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-2">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">Only</p>
+                                        <p class="card__price-value">40$</p>
+                                    </div>
+                                    <a href="#" class="btn btn--white">Book now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--3">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--3">Aristos-Body</span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>cndsocndj</li>
+                                        <li>dc dscsd</li>
+                                        <li>cdscl</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-3">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">Only</p>
+                                        <p class="card__price-value">50$</p>
+                                    </div>
+                                    <a href="#" class="btn btn--white">Book now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+
+
+            <section class="section-footer">
+
+                <div class="row">
+
+
+                    <div class="col-1-of-3">
+                        <div class="footer-parts">
+                            <div class="footer-parts__social-links">
+                                <li class="footer-parts__social-links--1"><ion-icon name="logo-facebook"></ion-icon></li>
+                                <li class="footer-parts__social-links--2"><ion-icon name="logo-instagram"></ion-icon></li>
+                                <li class="footer-parts__social-links--3"><ion-icon name="logo-twitter"></ion-icon></li>
+                                <div class="footer-parts__social-links--4"><ion-icon name="logo-linkedin"></ion-icon></div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-3">
+                        <div class="footer-parts">
+                                <div class="footer-parts__rights">
+                                    <p class="footer-parts__rights--1">Copyright &copy; 2020 by IKnowHow. All rights reserved.</p> 
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-3">
+                        <div class="footer-parts">
+                            <div class="footer-parts__skills">
+                                <li class="footer-parts__skills--1">IKnowHow</li>
+                                <li class="footer-parts__skills--2">Software Engineering</li>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+            
+
+
+
+
+        </main>
+        <footer class="footer">
+            <div class="footer__logo-box">
+                <img src="img/logoUI.png" alt="Full logo" class="footer__logo">
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">I Know How</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Aristos</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Software Engineering</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        Copyright &copy; 2020 by IKnowHow. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    </body>
+</html>
