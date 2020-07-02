@@ -19,7 +19,7 @@
         <script src="js/script.js"></script>
         <script src="js/jquery-ui.js"></script>
         <script src="js/progressBar.js"></script>
-        <title>Aristos | Vehicle with unique characteristics</title>
+        <title>Aristos | Vehicle </title>
         <script src="https://kit.fontawesome.com/264541b314.js" crossorigin="anonymous"></script>
 
         <!-- https://bennettfeely.com/clippy/ -->
@@ -27,10 +27,11 @@
     <body>
         <!-- BEM Logic : Block Element Modifier -->
         <header class="header"><!-- It's a block element has meaning alone  -->
+            
             <div class="header__logo-box"><!-- logo-box it's an element as it has not meaning on its own -->
                 <img src="img/logoUI.png" alt="Logo" class="header__logo"><!-- logo it's an element as it has no meaning on it's own  -->
             </div> 
-
+           
             <div class="header__text-box">    
                 <h1 class="heading-primary"><!-- It's a standalone block element -->
                     <span class="heading-primary--main">Aristos</span><!-- Modifier of the heading primary -->
@@ -38,7 +39,7 @@
                         GROUND VEHICLE</span><!-- Modifier of the heading primary -->
                 </h1>
                 <!-- I will add an anchor element -->
-                <a href="#" class="btn btn--white btn--animated js--scroll-aristos">Discover Aristos</a><!-- button is a block white and animated are modifiers -->
+                <a href="AristosChars.html" class="btn btn--white btn--animated js--scroll-aristos">Discover Aristos</a><!-- button is a block white and animated are modifiers -->
                 </a>
             </div>
         </header>
@@ -253,18 +254,20 @@
                         We make people genuinely happy
                     </h2>
                 </div>
+                <!--
+                We start with the shape, that will make this one a figure,
+                I making this a figure because it's semantically the best thing to do 
+                because we will have an image together with a caption(mary smith)
+                in figure element we can put an image and then some caption, with a 
+                figcaption element
+                story and img are elements of story block!!!
+                -->
                 <div class="row">
                     <div class="story">
-                        <!--
-                            We start with the shape, that will make this one a figure,
-                            I making this a figure because it's semantically the best thing to do 
-                            because we will have an image together with a caption(mary smith)
-                            in figure element we can put an image and then some caption, with a 
-                            figcaption element
-                            story and img are elements of story block!!!
-                        -->
+                        
                         <figure class="story__shape">
                             <img src="img/nat-8.jpg" alt="Person on a tour" class="story__img">
+                            <figcaption class="story__caption">Mary Smith</figcaption>
                         </figure>
                         <!--
                             Part that will contains the text 
@@ -273,6 +276,26 @@
                             <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family</h3>
                             <p>
                                 what goes around comes around it's a norm!
+                                Coronavirus teach to respect the environment and treat with respect 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="story">
+                        
+                        <figure class="story__shape">
+                            <img src="img/nat-9.jpg" alt="Person on a tour" class="story__img">
+                            <figcaption class="story__caption">Jack Wilson</figcaption>
+                        </figure>
+                        <!--
+                            Part that will contains the text 
+                        -->
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small">WOW! My life is completely different now!</h3>
+                            <p>
+                                what goes around comes around it's a norm!
+                                Coronavirus teach to respect the environment and treat with respect 
                             </p>
                         </div>
                     </div>

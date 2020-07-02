@@ -36,13 +36,52 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) translateY(-3.5rem) skewX(12deg);
+        position: relative;
     }
 
     &__img {
         height: 100%;// will be the 100% of the parent so 15rem
+        transform: translateX(-4rem) scale(1.4);
+     
+        transition: all .1s;
     }
 
     &__text {
         transform: skewX(12deg);
     }
+
+    /* Note ! ! ! 
+    The reason why transform: translate(-50%, -50%) is required is because you want the center of the element to line up with the center of its parent. In simple terms, it can be boiled down to translateX(-50%) translateY(-50%), which means:
+    move me leftwards by 50% of my width, along the x-axis, and
+    move me upwards by 50% of my height, along the y-axis
+    */
+
+    &__caption {
+        position: absolute;// we need to set the container to position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+
+    /* As soon as the story is hovered we need to change the caption */
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__img {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+
+
+
+
 }
