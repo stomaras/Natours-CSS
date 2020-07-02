@@ -155,9 +155,60 @@
   tags following a <ul> will have the style applied, not just the most immediate.
   
   
+  # Value Units 
   
-  
-  
+ # Numeric values : 1) Absolute : 
+                                    Units are always the same size no matter what.(For instance, if we specify a font is 12 points in size, it will be the same size everywhere
+                                    no matter its parent container.
+ # Numeric values : 2) Absolute :
+                                    Unit's size are relative to things like parent containers, an element's font-size, or the browser window size. They can change dependeing 
+                                    on circumstances.(For instance, if we specify an image should be 50% the width of it's parent, it will differ in size dependeing on the sixe 
+                                    of that parent).
+
+# Absolute units : 
+                      The most commonly used absolute units are:
+                      px:Pixels
+                      pt:Points, often used in the context of fonts and text.
+                      
+# Relative units : em
+                      Values are interesting because they are relative, but depending on their usage context, don't always denote the same measurement.
+                      1em = 16px
+# Relative units : rem
+                       also known as root em, works the same as em, but instead of being relative to an immediate parent, they are relative to the root element.Usually the
+                       web browser's parent HTML tag. If there is no explicit font size given, the default is always 16px.
+                       
+# Percentages : 
+                Percentages are another type of relative unit, because they rely on the relative size of their parent.Rules that use these might looks like this:
+                span {
+                  font-size: 1.6em;
+                }
+                
+                #kitten-picture {
+                  width: 65%;
+                }
+                
+                In this example #kitten-picture will be the 65% the width of its parent
+                
+                #kitten-picture {
+                  width: 65vw;
+                }
+                
+                In this example the picture will be 65% the width of the entire viewport
+                Note that many browsers remain buggy in their implementation of these units.
+                
+# Colors : 1) RGB 
+              body {
+                color: rgb(0,0,255);
+                background-color: rgb(100%,0%,0%);
+              }
+# Colors: 2) HEXAADECIMALS
+            h2{
+              color:#a0522d;
+            }
+# Colors: 3) Keywords
+            h2{
+              color:silver
+            }
   
   
   
