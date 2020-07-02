@@ -1,5 +1,68 @@
 # Natours-CSS
 
+
+# User Interfaces 
+
+  # UI Development Basics 
+  
+  # Cascades:
+    	The "C" in CSS stands for cascading. This refers to how CSS rules are applied to the DOM.It's possible for more than one style rule to apply to an HTML element.
+      For instance, pretend we have a div containing filler text, like this "
+      <div class="eassy-container">
+        <p class = "eassy-text">
+          Class aptent dkncsdlcsdlsnsdvl
+        </p>
+       </div>
+       
+   if this HTML was linked to a stylesheet that included the following two rules...
+      .eassy-container {
+        color: red
+      }
+      
+      .eassy-container {
+        color: blue;
+      }
+      
+  We have a conflict.You see, both rules attempt to change the font color of the same element. When this occurs , cascading determines the order conflicting styles are applied
+  , and therefore which 'overrides' the other. Here, the color:blue, declaration occurs after the color:red, declaration. So the font color in this div will be blue.
+  
+  Style rules are applied to elements in the order they are loaded. The font in the div will reeive instructions to be red. But when the browser reads and applies the next rule
+  , the div will receive instructions to be blue instead. So when the page loads, we will see blue text.
+  
+  
+  
+ # ID's are unique:
+ 
+  - Each element can have only one ID 
+  - Each page can have only one element with that ID
+  
+ # Classes
+ 
+  - You can use the same class on multiple elements 
+  - You can use multiple classes on the same element
+  
+ # There are no browser defaults for any ID or Class
+ 
+  - Adding a class name or ID to an element does anything to that element by default.
+  - Classes and ID's don't have any styling information to them all by themselves, They require CSS to target them and apply styling
+  
+ # ID's have special browser functionality
+ 
+  - Classes have no special abilities in the browser, but ID's do have one very important trick up their sleeve. This is the "hash value" in the URL.if you have a URL 
+    like http://yourdomain.com#comments, the browser will attempt to locate the element with an ID of "comments" and will automatically scroll the page to show that element. It 
+    is important to note here that the browser will scroll whatever elements it needs to in order to show that element, so if you do something like a scrollable DIV area within 
+    your regular body, that div will be scrolled to.
+    
+    This is an important reason right here why having ID's be absolutely unique is important.So your browser knows where to scroll.
+    
+  # Elements can have both 
+  
+   - There is nothing stopping you from having both an ID and Class on a single element. In fact, it is often a very good idea. Take for example the default markup 
+     for a wordpress comment list item: <li id="comment-1256" class="item">
+
+
+
+
 # BEM METHODOLOGY
 
   - Block - Element - Modifier
@@ -9,6 +72,8 @@
     2) Element: A part of a block that has no standalone meaning and is semantically tied to its block. ( Examples : menu__item, list item, checkbox caption )
     
     3) Modifier: A flag on a block or element. Use them to change appearance or behaviour. ( Examples : menu__item--disabled, checked, fixed, size big, color yellow )
+    
+    
     
     
 # 7-1 Architecture pattern SASS
