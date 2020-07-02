@@ -209,6 +209,25 @@
             h2{
               color:silver
             }
+            
+            
+# Specificity : 
+  In CSS, specificity is what determines which css rule is applied to which elements. You see, when two selectors are applied to the same element, the more specidic one           overrides the less specific one. For instance, consider the following two rules:
+  *{
+    color:red;
+  }
+  
+  .content {
+    color:blue;
+  }
+  The first rule uses the all(*) selector to apply a color property to red to everything. The second rule applies a blue propety to elements with a content class.
+  If these styles were linked to basic HTML like this...
+  <p class="content">
+  ...........................
+  </p>
+  
+  ... What color do you think the first line of text would be? Any guesses?
+  It would be blue! Even though both CSS selectors technically target the element with a content class,the second rule is more specific.As such, it overrides the less specific     rule
   
   
   
