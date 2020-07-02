@@ -109,6 +109,12 @@ html {
 .u-margin-bottom-small {
   margin-bottom: 2rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-big {
+  margin-top: 10rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -135,6 +141,12 @@ html {
   color: #555353; }
   .btn--white::after {
     background-color: #fff; }
+
+.btn--green {
+  background-color: #55c57a;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #55c57a; }
 
 .btn::after {
   content: "";
@@ -313,7 +325,9 @@ html {
     height: 23rem;
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, #ffb900, #f1732e), url(../img/AristosImage.img); }
     .card__picture--2 {
@@ -2081,7 +2095,7 @@ body .ui-tooltip {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
 
 .section-stories {
