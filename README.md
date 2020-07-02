@@ -73,9 +73,100 @@
     
     3) Modifier: A flag on a block or element. Use them to change appearance or behaviour. ( Examples : menu__item--disabled, checked, fixed, size big, color yellow )
     
+ # CSS Style Vocabulary :
+ 
+    Here, lines reading height:100px are style declarations. Every declaration has two parts, formatted as key-value pair
+      1) A property(height or width )
+      2) A value ( for example 100px)
+    Multiple declarations grouped together under a selector are called a declaration block
+      height : 100px;
+      width : 100px
+      selector: A declaration block is prefixed with a selector telling the browser which elements the style declarations will aplly to
+      #kitten-picture {
+      
+      }
+    The combination of a declaration block and selector together is called a rule:
+      #kitten-picture {
+        height:100px;
+        width:100px;
+      }
+    Multiple rules together in a file is called a stylesheet.
     
     
-    
+ # Advanced Selectors,
+ 
+  refer to CSS selectors that do something more complex than selecting a tag, class, or ID. This includes selecting a type of tag within another tag, or selecting an element 
+  with a certain ID or class, but only when the mouse is hovering over it.
+  
+  # Selector Stacking 
+  A stacked selector selects multiple types of elements. Elements are listed on the same line preceding the CSS rule, seperated by a comma like this :
+  a, strong {
+    color:red;
+  }
+  In this example , all <a> and <strong> tags will be colored red. Stacking selectors helps keep stylesheets DRY by applying similar styles to multiple elements in a single rule
+  
+  # ALL/Universal selector
+  The all selector , also called the universal selector , is denoted by the * symbol. It selects everything in HTML.
+  *{
+    margin:0
+  }
+  This is most commonly used for reseting default browser styles. For instance, the example above resets the margin of every element to 0.
+  
+  # Direct Descendant Selector
+  The direct descendant selector selects children nested a single layer deep within the DOM.It's denoted with the > symbol. The left side of the symbol contains the parent,
+  and the right side contains the direct descendent we are targeting, like this 
+  
+  .container > ul {
+    border: 4px solid red;
+  }
+  If this rule was applied to the following HTML, one <ul> would have a red border, and one would not, because only one is a direct descendant of the div with a container class.
+  
+  ...
+  <div class="container">
+    // This <ul> would have a red border, bcause it's nested directly within a parent with the class 'container'
+    <ul>
+      <li>One</li>
+      <li>Two</li>
+    <uL>
+      // The second <ul> would not have a red border, because it is not directly within the 'container' <div>
+    <ul>
+      <li>...</li>
+      <li>...</li>
+    </ul>
+  </div>
+  
+  
+ # Adjacent Selector
+ 
+ The adjacent selector, denoted by the + symbol, isolates elements of a certin type, but only if they immediately follow another specific type.
+ For instance, the rule below will turn contents of <p> elements red, but only if they immediately follow a <ul>:
+  
+  ul + p {
+    color:red; 
+  }
+  
+ # Simbling Combinator
+  We cann use the simbling combinator by adding a ~ symbol between two elements in a selector, like this:
+  
+  ul ~ p {
+    color:red;
+  }
+  This will select any paragraph following the <ul>. Any <p> before <ul> will not inherit the style.Notice this is different from the adjacent selector in that all <p>
+  tags following a <ul> will have the style applied, not just the most immediate.
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 # 7-1 Architecture pattern SASS
 
   sass/
