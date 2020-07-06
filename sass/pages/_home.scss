@@ -28,9 +28,8 @@
 }
 
 .section-stories {
+    position: relative;
     padding: 15rem 0;//15 top and bottom , 0 left and right
-    background-color: $color-grey-light-1;
-    
 }
 
 .section-footer{
@@ -44,6 +43,7 @@
 
 
     & > * {
+
         transform: skewY(7deg);
     }
     This means that we add the skewY(7deg) in all childrens of the parent .section-features 

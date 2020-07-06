@@ -253,7 +253,21 @@
                 4) How to use the <video> HTML element
                 5) How and when to use the object-fit property.
             -->
+
+            <!-- I get videos from the site https://coverr.co
+                 when download the video from the above mentioned site, video always come 
+                 into these two versions(mp4,webm). So we need these two formats 
+                 in order to make absolutely sure that they work across all of the browsers.
+                 At least all of the modern browsers.
+            -->
             <section class="section-stories">
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="img/video.mp4" type="video/mp4">
+                        <source src="img/video.webm" type="video/webm">
+                        Your browser is not supported!
+                    </video>
+                </div>
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary">
                         We make people genuinely happy
@@ -303,6 +317,10 @@
                             </p>
                         </div>
                     </div>
+                </div>
+
+                <div class="u-center-text u-margin-top-huge">
+                    <a href="#" class="btn-text">Read all stories &rarr;</a>
                 </div>
             </section>
 
