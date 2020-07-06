@@ -2116,6 +2116,27 @@ body .ui-tooltip {
   position: relative;
   padding: 15rem 0; }
 
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed567, #28b485); }
+
+/*
+
+    90 degrees especially going on the x direction
+    180 degrees especially going on the y direction
+    solid-color-gradient technique
+    the absence of any color is transparent
+*/
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.35);
+  height: 50rem; }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }
+
 .section-footer {
   padding: 3rem;
   margin-top: 2rem;
