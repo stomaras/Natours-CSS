@@ -98,22 +98,22 @@ html {
   font-size: 62.5%; }
 
 .u-center-text {
-  text-align: center; }
+  text-align: center !important; }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 .u-margin-bottom-small {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem !important; }
 
 .u-margin-top-big {
-  margin-top: 8rem; }
+  margin-top: 8rem !important; }
 
 .u-margin-top-big {
-  margin-top: 10rem; }
+  margin-top: 10rem !important; }
 
 .bg-video {
   position: absolute;
@@ -129,7 +129,7 @@ html {
     width: 100%;
     object-fit: cover; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -137,7 +137,9 @@ html {
   border-radius: 10rem;
   transition: all .2s;
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -146,7 +148,8 @@ html {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
@@ -418,6 +421,12 @@ html {
        we use the adjacent sibling selector +  because the sibling is right next to the first element
        if we have more levels among the siblings for example div buttons e.t.c then we still use a 
        sibling selector but we would have to use this one ~ general sibling selector 
+    */
+  /*
+        As soon as we hit the label element , the radio-input becomes checked. So we have this 
+        checked pseudo-class available to us and what we do then is to simply select the sibling of that one
+        , and then the child because that's one that we want to change each time that the radio input is selected
+
 
     */ }
   .form__group:not(:last-child) {
@@ -432,6 +441,7 @@ html {
     border-bottom: 3px solid transparent;
     width: 60%;
     display: block;
+    transition: all .5s;
     /* When the input focus element is invalid */ }
     .form__input:focus {
       outline: none;
@@ -452,6 +462,14 @@ html {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem); }
+  .form__radio-group {
+    width: 49%;
+    display: inline-block; }
+  .form__radio-label {
+    font-size: 1.6rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 1rem; }
 
 /*! jQuery UI - v1.11.4 - 2015-03-11
 * http://jqueryui.com
