@@ -25,6 +25,29 @@
         <!-- https://bennettfeely.com/clippy/ -->
     </head>
     <body>
+
+        <div class="navigation">
+            <!-- First Ingredient for the checkbox hack -->
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+
+            <label for="navi-toggle" class="navigation__button">MENU</label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular Tours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+
         <!-- BEM Logic : Block Element Modifier -->
         <header class="header"><!-- It's a block element has meaning alone  -->
             
@@ -378,39 +401,24 @@
                     </div>
                 </div>
             </section>
+            <!--
+                - What the "checkbox hack" is and how it works;
+                - How to create custom animation timing functions using cubic bezier curves;
+                - How to animate :solid-color-gradients"
+                - How and why to use transform-origin property;
+                - In general: create an amazingly creative effect!
+            -->
+            <!--
+                There are 3 steps for this to work ,
+                1) is to first have a checkbox which will be hidden later,
+                2) then second have a label connected to that checkbox which is where we click,
+                3) reveal the entire navigation in the background as soon as the checkbox becomes checked
+                   and we can use the checked pseudo class in CSS to style this
 
-            <section class="section-footer">
-                <div class="row">
-                    <div class="col-1-of-3">
-                        <div class="footer-parts">
-                            <div class="footer-parts__social-links">
-                                <li class="footer-parts__social-links--1"><ion-icon name="logo-facebook"></ion-icon></li>
-                                <li class="footer-parts__social-links--2"><ion-icon name="logo-instagram"></ion-icon></li>
-                                <li class="footer-parts__social-links--3"><ion-icon name="logo-twitter"></ion-icon></li>
-                                <div class="footer-parts__social-links--4"><ion-icon name="logo-linkedin"></ion-icon></div>
+                This will be the first element in the entire web document.
+            -->
 
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-3">
-                        <div class="footer-parts">
-                                <div class="footer-parts__rights">
-                                    <p class="footer-parts__rights--1">Copyright &copy; 2020 by IKnowHow. All rights reserved.</p> 
-                                </div>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-3">
-                        <div class="footer-parts">
-                            <div class="footer-parts__skills">
-                                <li class="footer-parts__skills--1">IKnowHow</li>
-                                <li class="footer-parts__skills--2">Software Engineering</li>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+           
         </main>
         <footer class="footer">
             <div class="footer__logo-box">
