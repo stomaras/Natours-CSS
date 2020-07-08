@@ -1,3 +1,26 @@
+/*
+0 - 600px:     Phone                            - max-width media query for this range 
+600 - 900px:   Tablet portrait                  - max-width media query for this range 
+900 - 1200px:  Tablet landscape                 - max-width media query for this range 
+[1200 - 1800]  is where our normal styles apply 
+1800px + :     Big desktop                      - min-width media query for this range 
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ems and rems are not affected by a root font size setting, 
+ems are the best option for media queries from all othe relative units for example rem
+1em = 16px
+so in my case 600/16
+              900/16
+              1200/16
+              1800/16
+
+I have a conflict in line 50
+*/
 /* COLORS */
 /* Social Media Colours */
 @keyframes moveInLeft {
@@ -96,6 +119,18 @@ body {
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 .u-center-text {
   text-align: center !important; }

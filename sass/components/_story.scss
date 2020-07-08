@@ -9,6 +9,8 @@
     font-size: $default-font-size;// This property inherit to childrens 
     transform: skewX(-12deg);
 
+    
+
     // NOTE 1 !!!
     // We use the direct child selector and then selected everything
     // this will work with the shape and text but not with image, because we have a transform already
