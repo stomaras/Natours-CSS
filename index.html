@@ -23,6 +23,105 @@
         <script src="https://kit.fontawesome.com/264541b314.js" crossorigin="anonymous"></script>
 
         <!-- https://bennettfeely.com/clippy/ -->
+        <!--
+            Two modern aspects of modern responsive design are, without a doubt, 
+            deciding about doing mobile first or desktop-first for their website or app, 
+            as well as selecting breakpoints for our project, when writing media queries.
+
+            1) Desktop-first-approach
+                In the desktop-first approach, we optimize our interfaces for the large screens;
+                Now later, when we make the website responsive, we simply write media queries, in order 
+                to shrink the design to fit the smaller screens.
+                In this case the way we do this is by writing media-queries to test for max-width
+
+            2) Mobile-first-approach 
+                In mobile-first-approach, we start writing CSS code for smaller screens, in order to 
+                optimize for mobile. And then, move up to larger screens from there using media queries.
+                In this case we do this by writing media queries to test for min-width
+
+            3) Let's discuss about the different types of media queries that we have to write for each 
+               approach: max-width for desktop-first and min-width for mobile-first.
+               breakpoints in px are 0 600px 900px 1200px
+               For Desktop-First the code is on the right side of spectrum 1200+
+               Now in order to adapt our design to smaller screens, we write max-width: 600px <=> (is width <= 600px)
+               So what this media query does , is that it basically checks if the current viewport width is smaller
+               or equal to 600 pixels. And if it is, then all the CSS Code that is in media query will apply and if not
+               that specific code will just not apply.
+
+            4) Think of media queries as tools, to overriding specific parts of our CSS for specific viewport width.
+               this work for all breakpoints and media queries ... so for 900px, 1200px.
+
+            5) What if a phone has a width of 500 pixels ? Which media query will apply now? 
+               Both above mentioned queries will apply, because both conditions are true
+               500 < 600 , but , also less than 900 pixels
+
+            6) Media queries don't add any importance or specificity to selectors so code order matters
+               - media queries at the end!
+
+            7) min-width: 600px <=> (is width >= 600px ?), is the current viewport width larger or equal to 600pixels
+               this media query will apply only for screens larger or equal to 600pixels.
+               with min-width we want to stay away from smaller screen sizes.
+
+            8) Pros and Cons of mobile-first-design :
+
+                                                    pros:
+                                                        - narrow down our interfaces
+                                                        - results in smaller,faster and more efficient products
+                                                        - completely optimized for mobile users.
+                                                        - prioritizes content over aesthetic design, which may be desirable
+                                                    
+                                                    cons:
+                                                        - the desktop version might feel overly empty and 
+                                                          simplistic
+                                                        - More difficult and counterintuitive to develop;
+                                                        - Less creative freedom, making it more difficult 
+                                                          to create distinctive products;
+                                                        - Clients are used to see a desktop version of the 
+                                                          site as a prototype;
+                                                        - Do your users even use the mobile internet? What's the 
+                                                          purpose of your website.
+
+            9) Breakpoints, are the viewport width at which we want our design to change or 
+               in other words , where we want to put our media quereis. One thing is for sure 
+               we have to decide breakpoints for our design.
+
+            10) There are 3 ways of choosing breakpoints : 
+
+                a) The bad way : The most popular one , simply using the width of popular devices 
+                                 as the breakpoints. Designers really like to use Apple products 
+                                 ,like the iPhone and the ipad, to set breakpoints for their screen 
+                                 width. First problem you optimizing for one very specific device ignoring 
+                                 all the users of other devices. Second this strategy is not future proof
+                                 at all. If tommorow apple decides to completely change resolutions
+                                 on all their devices, do you want to go ahead and change all the mdeia queries
+                                 on all your projects that you've ever built ? We talk a lot about reusable 
+                                 and maintainable code and using specific devices as breakpoints, is completely
+                                 against all that logic.
+
+                b) The good way : We llok at all the most-used device width on the entire internet, try to 
+                                  group them together in a logical way and then pick our brekpoints from that
+                                  We don't put brakpoints at on point but among similar devices width
+
+                c) The perfect way : The perfect way to implement is to ignore devices all together and only
+                                     look at your content and your design. Only look where design breaks.
+                                     You begin at one size either mobile or desktop and then start increasing 
+                                     your screen width or decreasing for desktop first. Then as soon as the design 
+                                     breaks, which means that the design no longer works, it no longer looks okay,
+                                     then you insert a new breakpoint.
+                                     So you start to put the breakpoints wherever your design starts to look weird
+                                     and out of place and don't think about devices at all.
+                                     without predifend breakpints.
+
+                In this project we will use the second approach the good one 
+                http://gs.statcounter.com/screen-resolution-stats
+
+            11) Breakpoints for our project : 
+                                                1) PHONE ONLY: 0-600px
+                                                2) TABLET PORTRAIT: 600-900px
+                                                3) LANDSCAPE TABLETS: 900-1200px
+                                                4) DESKTOP: 1200-1800px
+                                                5) BIG DESKTOP: 1800px +
+        -->
     </head>
     <body>
 
@@ -482,34 +581,9 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!--
+            
+        -->
         <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     </body>
 </html>
