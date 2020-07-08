@@ -478,7 +478,10 @@ html {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 9999; }
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .10s; }
   .popup__content {
     position: absolute;
     top: 50%;
@@ -490,7 +493,9 @@ html {
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     display: table;
-    overflow: hidden; }
+    overflow: hidden;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all .4s .2s; }
   .popup__left {
     width: 33.333333%;
     display: table-cell; }
@@ -529,6 +534,10 @@ html {
 
                 In real life in order to do all prefixes you can use nice tools 
                 one of them is called Autoprefixer.
+
+            6) NOTE !!!
+
+                We can't have transform property in more than one time in a single block!
         */
     -moz-column-count: 2;
     -moz-column-gap: 4rem;
@@ -540,6 +549,24 @@ html {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__close:link, .popup__close:visited {
+    color: #555353;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 3rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s;
+    line-height: 1; }
+  .popup__close :hover {
+    color: #55c57a; }
 
 /*! jQuery UI - v1.11.4 - 2015-03-11
 * http://jqueryui.com
