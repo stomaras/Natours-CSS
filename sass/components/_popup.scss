@@ -1,0 +1,81 @@
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed; // does not move as we scroll
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black, .8);
+    z-index: 9999; // in order to be on top of the entire page
+
+    &__content {
+        @include absCenter;
+        width: 75%;
+        height: 50rem;
+        background-color: $color-white;
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        border-radius: 3px;
+        display: table;
+        overflow: hidden;
+    }
+
+    &__left {
+        width: 33.333333%;
+        display: table-cell;
+    }
+
+    &__right {
+        width: 66.666667%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem 5rem;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;// the entire parent containers width
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+        /*  
+            1) NOTE !!!
+
+                Let's start with the columns. So column layout is something really new in CSS,
+                but we can make it work in most of the modern browsers already
+
+            2) NOTE !!! 
+
+                property column-gap has default value 1em;
+
+            3) NOTE !!!
+
+                1em = 14px;
+
+            4) NOTE !!!
+
+                Another property is column-rule which is basically just like a border which will be 
+                exactly in the middle of these two columns, so the browser will automatically 
+                put it there
+
+            5) NOTE !!! 
+
+                In real life in order to do all prefixes you can use nice tools 
+                one of them is called Autoprefixer.
+        */
+
+        -moz-column-count: 2;
+        -moz-column-gap: 4rem;
+        -moz-column-rule: 1px solid $color-grey-light-2;
+
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-grey-light-2;
+
+        // prefixes in order to work in modern browsers
+        -moz-hyphens: auto; // in order to work for mozilla
+        -ms-hyphens: auto;  // in order to work for edge
+        -webkit-hyphens: auto; // in order to work for chrome and Safari
+        hyphens: auto;
+    }
+}

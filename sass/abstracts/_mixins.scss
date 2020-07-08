@@ -5,5 +5,11 @@
         clear: both;
     }
 }
-
 // what clearfix does is to append a pseudo - element after the element which will then clear these floats
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
