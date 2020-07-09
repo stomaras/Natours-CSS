@@ -14,12 +14,16 @@ $breakpoint argument choices:
 ems and rems are not affected by a root font size setting, 
 ems are the best option for media queries from all othe relative units for example rem
 1em = 16px
-so in my case 600/16
+so in my case 
+              400/16
+              600/16
               900/16
               1200/16
               1800/16
 
 I have a conflict in line 50
+
+ORDER: Base + Typography > general layout + grid page layout > components
 */
 /* COLORS */
 /* Social Media Colours */
@@ -60,7 +64,6 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #555353;
-  padding: 3rem;
   box-sizing: border-box; }
 
 .heading-primary {
@@ -76,12 +79,19 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-family: 5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .5rem; } }
 
 .heading-secondary {
   font-size: 2.8rem;
@@ -93,6 +103,12 @@ body {
   letter-spacing: .2rem;
   color: transparent;
   transition: all .2s; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -128,9 +144,19 @@ html {
   @media (max-width: 37.5em) {
     html {
       font-size: 30%; } }
+  @media (max-width: 25em) {
+    html {
+      font-size: 20%; } }
   @media (min-width: 112.5em) {
     html {
       font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 .u-center-text {
   text-align: center !important; }
@@ -2209,6 +2235,10 @@ body .ui-tooltip {
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -2228,6 +2258,13 @@ body .ui-tooltip {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem; } }
   .row::after {
     content: "";
     display: table;
@@ -2236,6 +2273,16 @@ body .ui-tooltip {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -2254,6 +2301,9 @@ body .ui-tooltip {
   padding: 10rem 0;
   font-size: 1.4rem;
   color: #f7f7f7; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
@@ -2275,6 +2325,10 @@ body .ui-tooltip {
   .footer__navigation {
     border-top: 1px solid #f7f7f7;
     padding-top: 1rem; }
+    @media (max-width: 56.25em) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -2296,6 +2350,10 @@ body .ui-tooltip {
     margin-top: .1rem;
     border-top: 1px solid #f7f7f7;
     padding-top: 1rem; }
+    @media (max-width: 56.25em) {
+      .footer__copyright {
+        width: 100%;
+        float: none; } }
 
 .navigation__checkbox {
   display: none; }
@@ -2312,6 +2370,14 @@ body .ui-tooltip {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 5rem;
+      right: 8rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      top: 3.5rem;
+      right: 5.5rem; } }
 
 .navigation__background {
   height: 6rem;
@@ -2323,6 +2389,14 @@ body .ui-tooltip {
   background-image: radial-gradient(#7ed567, #28b485);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1); }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      top: 5rem;
+      right: 8rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      top: 4rem;
+      right: 6rem; } }
 
 .navigation__nav {
   height: 100vh;

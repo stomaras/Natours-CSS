@@ -34,16 +34,24 @@ $breakpoint argument choices:
 ems and rems are not affected by a root font size setting, 
 ems are the best option for media queries from all othe relative units for example rem
 1em = 16px
-so in my case 600/16
+so in my case 
+              400/16
+              600/16
               900/16
               1200/16
               1800/16
 
 I have a conflict in line 50
+
+ORDER: Base + Typography > general layout + grid page layout > components
 */
+
 
 @mixin respond($breakpoint) {
 
+    @if $breakpoint == small-phone { //400px
+        @media (max-width: 25em) { @content };
+    }
     @if $breakpoint == phone {
         @media (max-width: 37.5em) { @content }; // 600px
     }
