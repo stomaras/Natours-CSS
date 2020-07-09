@@ -179,6 +179,10 @@
             &:hover &__side--front {
                 transform: rotateY(0);
             }
+
+            &__details {
+                padding: 1rem 3rem;
+            }
         
             // FRONT SIDE STYLING
             &__cta {
@@ -199,7 +203,6 @@
         
             &__price-value {
                 font-size: 4rem;
-                
                 margin-top: .5rem;
             }   
         }
