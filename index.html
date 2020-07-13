@@ -5,8 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-
-
         <link rel="stylesheet" href="css/icon-font.css">
         <link rel="stylesheet" href="css/icon-font.css">
         <link rel="stylesheet" href="css/style1.css">
@@ -155,6 +153,8 @@
                     3) ART DIRECTION: For example, you may want to keep the important details in an image but remove parts of an 
                                       image around these details or you could also want to load a completely different 
                                       image altogether and responsive images actually allow you to do that.
+
+            
         -->
     </head>
     <body>
@@ -181,8 +181,6 @@
             </nav>
         </div>
 
-
-
         <!-- BEM Logic : Block Element Modifier -->
         <header class="header"><!-- It's a block element has meaning alone  -->
             
@@ -208,6 +206,7 @@
              the u-center-text is a utility class which only have one simple goal , and in this case 
              it will be to center text
         -->
+
         <main>
             <section class="section-about">
                 <div class="u-center-text u-margin-bottom-big">
@@ -560,11 +559,39 @@
                 This will be the first element in the entire web document.
             -->
 
+            <!--
+                - How to use the srcset attribute on the <img>
+                  and <source> elements, together with density descriptors;
+
+                - How and why to use the <picture> element for art direction;
+
+                - How to write media queries in HTML.
+
+                Images in HTML simply i mean all the img test, where we specify source for the image
+
+                density switching : use a large version of the same image for high resolution screens 
+                                    and serve a smaller version of the same image for a low density screen
+                
+                art direction : we tell the browser to use one image on one screen width and another image 
+                                on another screen width. For that we use an HTML element called picture.
+
+                                in media attribute we can use a css media query.
+            -->
+
            
         </main>
         <footer class="footer">
             <div class="footer__logo-box">
-                <img src="img/logoUI.png" alt="Full logo" class="footer__logo">
+
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" 
+                            media="(max-width: 37.5em)">
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" class="footer__logo">
+                </picture>
+
+
+
+                
             </div>
             <div class="row">
                 <div class="col-1-of-2">
@@ -623,3 +650,4 @@
         <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     </body>
 </html>
+
