@@ -11,6 +11,28 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+    // until this point we write media queries in relation with the screen or the viewport width
+    // we can write media queries not only depending on viewport width , but also dependeing on 
+    // other things like device resolution.
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+        background-image:linear-gradient(
+        to right bottom,
+         rgba($color-secondary-light, 0.8),
+         rgba($color-secondary-dark, 0.8)), 
+        url(../img/grass.jpg);
+    }
+
+    // is the width larger than 2000px
+    @media (min-width: 125em) {
+        background-image:linear-gradient(
+            to right bottom,
+             rgba($color-primary-light, 0.8),
+             rgba($color-primary-dark, 0.8)), 
+            url(../img/hero.jpg);
+    }
+
+
+
     // & operator copies the header selector up until this point 
     @include respond(phone) {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
